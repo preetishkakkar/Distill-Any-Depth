@@ -47,7 +47,6 @@ We provide **two models** of varying scales for robust relative depth estimation
 | Distill-Any-Depth-Multi-Teacher-Small | Dav2-small | 24.8M | [Download](https://huggingface.co/xingyang1/Distill-Any-Depth/resolve/main/small/model.safetensors?download=true) |
 | Distill-Any-Depth-Multi-Teacher-Base | Dav2-base | 97.5M | [Download](https://huggingface.co/xingyang1/Distill-Any-Depth/resolve/main/base/model.safetensors?download=true) |
 | Distill-Any-Depth-Multi-Teacher-Large | Dav2-large | 335.3M | [Download](https://huggingface.co/xingyang1/Distill-Any-Depth/resolve/main/large/model.safetensors?download=true) |
-
 <!-- | Distill-Any-Depth-Dav2-Teacher-MiDaSv3.1 | dpt_beit_large_512 | 345M | [Download]() | -->
 | Distill-Any-Depth-Dav2-Teacher-Large-2w-iter | Dav2-large | 335.3M | [Download](https://huggingface.co/xingyang1/Distill-Any-Depth/resolve/main/Distill-Any-Depth-Dav2-Teacher-Large-2w-iter/model.safetensors?download=true) |
 

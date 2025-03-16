@@ -97,6 +97,8 @@ def process_images(validation_images, image_logs_folder, transform, model, devic
         validation_image = transform({'image': validation_image_np})['image']
         validation_image = torch.from_numpy(validation_image).unsqueeze(0).to(device)
 
+        image_name_no_ext = os.path.splitext(os.path.basename(image_path))[0]
+
         with torch.autocast("cuda"):
             pred_disp, _ = model(validation_image) if 'midas' not in args.arch_name else model(validation_image)
         pred_disp_np = pred_disp.cpu().detach().numpy()[0, :, :, :].transpose(1, 2, 0)
@@ -113,7 +115,7 @@ def process_images(validation_images, image_logs_folder, transform, model, devic
 
         image_out = Image.fromarray(np.concatenate([depth_colored_hwc], axis=1))
         images.append(image_out)
-        image_out.save(osp.join(image_logs_folder, f'da_sota_{i}.jpg'))
+        image_out.save(osp.join(image_logs_folder, f'{image_name_no_ext}_{i}.jpg'))
         print(f'{i} OK')
         torch.cuda.empty_cache()
 
